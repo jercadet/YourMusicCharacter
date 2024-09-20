@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Character for {{ track_name }}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/top_songs.css') }}">
+    <link href="/templates/css/top_songs.css" rel="stylesheet" />
 </head>
+
 <body>
     <h1>Character for {{ track_name }}</h1>
     <div class="character-card">
         <h2>{{ character_name }}</h2>
-        <img src="{{ url_for('static', filename='characters/' + character_image_url) }}" alt="{{ character_name }}">
+        <img src="{{ '../assets/characters/' + character_image_url }}" alt="{{ character_name }}">
         <p>Character Type: {{ character_type }}</p>
     </div>
 </body>
+
 </html>

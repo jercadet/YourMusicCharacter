@@ -1,0 +1,165 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(174, 248, 174, 1), rgba(255, 255, 255, 1));
+    opacity: 1;
+    z-index: -2;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/spotifybg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+@media only screen and (min-width: 1500px) {
+    .monster-container {
+        position: relative;
+        overflow: hidden;
+        padding: 20% 0;
+    }
+
+    .monster-container img {
+        width: 15%;
+        position: relative;
+        height: auto;
+        float: right;
+        filter: brightness(20%);
+    }
+
+    .monster-container img.front-monster {
+        width: 20%;
+        height: auto;
+        filter: brightness(100%);
+        z-index: 1;
+        bottom: 80px;
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    .monster-container {
+        display: none;
+    }
+}
+
+.logo-container {
+    text-align: center;
+    position: absolute;
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 1px;
+    margin: 8px 0 0 8px;
+}
+
+.logo-text {
+    color: black;
+    font-size: 21px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    word-wrap: break-word;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.spotify-logo {
+    width: 27px;
+    height: 27px;
+}
+
+.title-container {
+    padding: 10vh 0;
+    position: relative;
+}
+
+.title-welcome {
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+    align-items: center;
+    color: black;
+    font-size: 8vh;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    word-wrap: break-word;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.title-test {
+    position: relative;
+    text-align: center;
+    align-items: center;
+    padding-bottom: 10px;
+    color: black;
+    font-size: 5vh;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 720;
+    word-wrap: break-word;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.description {
+    position: relative;
+    padding: 0 30px 0 30px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 28px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    word-wrap: break-word;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    line-height: 1.4;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 95px;
+    background: rgba(0, 0, 0, 0.20);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.button-container {
+    width: 70vw;
+    height: 10vh;
+    position: relative;
+    align-items: center;
+    display: block;
+    margin: auto;
+    background: black;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 60px;
+    border: 2px solid black;
+    color: white;
+    font-size: 1.5em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    word-wrap: break-word;
+    cursor: pointer;
+}

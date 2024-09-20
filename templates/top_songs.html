@@ -1,43 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Your Top 5 Songs</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/top_songs.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/templates/css/top_songs.css" rel="stylesheet" />
+    <title>Top Songs</title>
 </head>
+
 <body>
     <h1>Your Top 5 Songs</h1>
-    <div id="tracks">
+    <div id="tracks" class="song-container">
         {% if error %}
-            <p>{{ error }}</p>
+        <p>{{ error }}</p>
         {% elif tracks %}
-            {% for track in tracks %}
-                <div class="song-card">
-                    <div class="track-info">
-                        <h2>{{ track.name }}</h2>
-                        <p>{{ track.artist }}</p>
-                    </div>
-                    <div class="track-preview">
-                        {% if track.preview_url %}
-                            <audio controls>
-                                <source src="{{ track.preview_url }}" type="audio/mpeg">
-                                Your browser does not support the audio element.
-                            </audio>
-                        {% else %}
-                            <p>No preview available</p>
-                        {% endif %}
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
-        <div class="discover-button">
-            <a href="{{ url_for('discover_character') }}">
-                <button>Discover Character</button>
+        {% for track in tracks %}
+        <div class="song-card">
+            <div class="track-info">
+                <h2>{{ track.name }}</h2>
+                <p>{{ track.artist }}</p>
+            </div>
+            <div class="track-preview" style="color: black;">
+                {% if track.preview_url %}
+                <audio controls>
+                    <source src="{{ track.preview_url }}" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                {% else %}
+                <p>No preview available</p>
+                {% endif %}
+            </div>
+            <a href={{"/character/" + track.id}}>
+                <button type="button">Discover Character</button>
             </a>
         </div>
-        {% else %}
-            <p>No tracks found.</p>
-        {% endif %}
+        {% endfor %}
+    </div>
+    {% else %}
+    <p>No tracks found.</p>
+    {% endif %}
+    </div>
+    </div>
+    <div class="footer">
+        A Tech Cadet Project
     </div>
 </body>
+
 </html>
